@@ -5,7 +5,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Entre em Contato</h5>
                     <p class="mb-4">A "Patinhas Felizes" é uma organização não governamental (ONG) dedicada à adoção de animais. Fundada com a missão de proporcionar um lar amoroso e permanente para animais abandonados, maltratados e desabrigados, a Patinhas Felizes trabalha incansavelmente para criar um ambiente seguro e acolhedor para esses animais indefesos.</p>
+<<<<<<< HEAD
                     <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Rua pet-ista,13 - Vila Lula</p>
+=======
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Rua pet-ista nº13</p>
+>>>>>>> Luiz
                     <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>patinhafeliz@example.com</p>
                     <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+13 13 91313-1313</p>
                 </div>
