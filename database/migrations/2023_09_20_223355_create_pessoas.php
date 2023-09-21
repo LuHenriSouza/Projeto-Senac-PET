@@ -30,3 +30,4 @@ class CreatePessoasTable extends Migration
         Schema::dropIfExists('pessoas');
     }
 }
+// test
