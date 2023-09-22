@@ -12,12 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('animais', function (Blueprint $table) {
-            $table->increments('id_animal');
-            $table->string('nome',45)->nullable();
-            $table->string('cor',45)->nullable();
-            $table->integer('idade')->nullable();
+            $table->id();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
