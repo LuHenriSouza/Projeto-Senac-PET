@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('animais', function (Blueprint $table) {
-            $table->increments('id_animal');
-            $table->string('nome',45)->nullable();
-            $table->string('cor',45)->nullable();
-            $table->integer('idade')->nullable();
+        Schema::create('historico__animals', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('animais');
+        Schema::dropIfExists('historico__animals');
     }
 };
