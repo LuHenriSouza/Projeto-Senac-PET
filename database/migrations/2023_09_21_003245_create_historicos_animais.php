@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('id_historico_animal');
             $table->text('historico_animal');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

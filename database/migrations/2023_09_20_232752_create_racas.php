@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('racas', function (Blueprint $table) {
             $table->increments('id_raca');
-            $table->string('raca');
+            $table->string('raca',100);
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

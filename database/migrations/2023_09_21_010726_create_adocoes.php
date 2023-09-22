@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('adocoes', function (Blueprint $table) {
             $table->increments('id_adocao');
-            $table->string('adocao');
+            $table->string('adocao',100);
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
