@@ -28,6 +28,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="my-style.css">
 </head>
 
 <body>
@@ -49,7 +51,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
     @yield('scripts')
 </body>
 
