@@ -10,18 +10,17 @@ class CreatePessoasTable extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id_pessoas');
-            $table->string('nome');
-            $table->string('email');
-            $table->string('telefone');
-            $table->string('endereco');
-            $table->string('cep');
-            $table->text('residencia_desc');
-            $table->string('cidade');
+            $table->string('nome',70)->nullable();
+            $table->string('email',45)->nullable();
+            $table->char('telefone',11)->nullable();
+            $table->text('endereco')->nullable();
+            $table->char('cep',8)->nullable();
+            $table->text('residencia_desc')->nullable();
+            $table->string('cidade',45)->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
-            // $table->foreign('id_historicos_pessoas')
-            //     ->references('id')->on('historicos_pessoas')
-            //     ->onDelete('set null'); // Define a ação em caso de exclusão
+
         });
     }
 

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->increments('id_historicos_adocoes');
             $table->text('historico_adocao');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

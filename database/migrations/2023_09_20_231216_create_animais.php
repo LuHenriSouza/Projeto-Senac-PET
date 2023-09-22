@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('animais', function (Blueprint $table) {
             $table->increments('id_animal');
-            $table->string('nome');
-            $table->string('cor');
-            $table->int('idade');
+            $table->string('nome',45)->nullable();
+            $table->string('cor',45)->nullable();
+            $table->int('idade')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

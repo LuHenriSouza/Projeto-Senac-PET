@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('tamanhos', function (Blueprint $table) {
             $table->increments('id_tamanho');
-            $table->string('tamanho');
+            $table->char('tamanho',1);
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
