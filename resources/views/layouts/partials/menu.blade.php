@@ -6,7 +6,7 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase mb-1">Onde estamos</h6>
-                        <span>Rua Pet-ista nº13</span>
+                        <span>Rua Pet-ista nº13 - Vila Lula</span>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
-        <a href="{{route('dashboard')}}" class="navbar-brand ms-lg-5">
+        <a href="{{ route('dashboard') }}" class="navbar-brand ms-lg-5">
             <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Patinha Feliz</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -43,7 +43,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="{{route('dashboard')}}" class="nav-item nav-link">Home</a>
+                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">Sobre nós</a>
                 <a href="service.html" class="nav-item nav-link">Serviços</a>
                 <div class="nav-item dropdown">
@@ -56,7 +56,16 @@
                         <a href="detail.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Criar Conta <i class="bi bi-arrow-right"></i></a>
+                @guest
+                    <a href="{{ route('register') }}"
+                        class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Criar Conta <i
+                            class="bi bi-arrow-right"></i></a>
+                @endguest
+                @auth
+                <a href="{{ route('register') }}"
+                class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
+                    class="bi bi-arrow-right"></i></a>
+                @endauth
             </div>
         </div>
     </nav>
