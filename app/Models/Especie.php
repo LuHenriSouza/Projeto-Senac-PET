@@ -21,6 +21,7 @@ class Especie extends Model
 
     protected $fillable = [
         'especie'
+
     ];
 
     // Relacionamentos
