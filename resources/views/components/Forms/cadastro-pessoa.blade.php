@@ -10,27 +10,27 @@
                     <form action="">
                         <div class="row g-3">
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Endereço"
+                                <input type="text" class="form-control border-0 px-4" placeholder="Endereço"
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="CEP"
+                                <input type="text" class="form-control border-0 px-4" placeholder="CEP"
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Cidade"
+                                <input type="text" class="form-control border-0 px-4" placeholder="Cidade"
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Estado"
+                                <input type="text" class="form-control border-0 px-4" placeholder="Estado"
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="email" class="form-control bg-light border-0 px-4" placeholder="Telefone"
+                                <input type="email" class="form-control border-0 px-4" placeholder="Telefone"
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" style="max-width: 200px;" type="submit">Próximo</button>
+                                <button class="btn btn-primary w-100 py-3" style="max-width: 200px;" type="button" id="botaoProximo" data-target="#elemento-alvo">Próximo</button>
                             </div>
                         </div>
                     </form>

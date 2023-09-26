@@ -75,12 +75,12 @@
                             </div>
                             <div class="col-12">
                                 <label for="motivo" class="fs-5 text-dark mb-2">Em poucas palavras diga o por quê de querer adotar um animal</label>
-                                <input name="motivo" id="motivo" type="text" class="form-control bg-light border-0 px-4" placeholder="Escreva..."
+                                <input name="motivo" id="motivo" type="text" class="form-control border-0 px-4" placeholder="Escreva..."
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
                                 <label for="obs" class="fs-5 text-dark mb-2">Observações</label>
-                                <textarea name="obs" id="obs" class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Opcional*"></textarea>
+                                <textarea name="obs" id="obs" class="form-control border-0 px-4 py-3" rows="4" placeholder="Opcional*"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" style="max-width: 200px;"
