@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Status_Adocao;
+use App\Models\statusAdocao;
 use Illuminate\Http\Request;
 
 class StatusAdocaoController extends Controller
@@ -34,7 +34,7 @@ class StatusAdocaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Status_Adocao $status_Adocao)
+    public function show(statusAdocao $statusAdocao)
     {
         //
     }
@@ -42,7 +42,7 @@ class StatusAdocaoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Status_Adocao $status_Adocao)
+    public function edit(statusAdocao $statusAdocao)
     {
         //
     }
@@ -50,7 +50,7 @@ class StatusAdocaoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Status_Adocao $status_Adocao)
+    public function update(Request $request, statusAdocao $statusAdocao)
     {
         //
     }
@@ -58,7 +58,7 @@ class StatusAdocaoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Status_Adocao $status_Adocao)
+    public function destroy(statusAdocao $statusAdocao)
     {
         //
     }

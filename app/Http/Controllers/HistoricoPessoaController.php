@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HistoricoPessoa;
+use App\Models\id_historico_pessoa;
 use Illuminate\Http\Request;
 
-class HistoricoPessoaController extends Controller
+class id_historico_pessoaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class HistoricoPessoaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(HistoricoPessoa $HistoricoPessoa)
+    public function show(id_historico_pessoa $id_historico_pessoa)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoricoPessoaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(HistoricoPessoa $HistoricoPessoa)
+    public function edit(id_historico_pessoa $id_historico_pessoa)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoricoPessoaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, HistoricoPessoa $HistoricoPessoa)
+    public function update(Request $request, id_historico_pessoa $id_historico_pessoa)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoricoPessoaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(HistoricoPessoa $HistoricoPessoa)
+    public function destroy(id_historico_pessoa $id_historico_pessoa)
     {
         //
     }

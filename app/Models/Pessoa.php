@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\{
     Sexo,
     Adocao,
-    HistoricoPessoa
+    id_historico_pessoa
 };
 
 class Pessoa extends Model
@@ -31,17 +31,33 @@ class Pessoa extends Model
         'cep',
         'residencia_desc',
         'cidade',
-        'id_HistoricoPessoa'
+        'id_id_historico_pessoa'
 
     ];
 
     //Relacionamento
 
-    public function HistoricoPessoa(){
+    public function id_historico_pessoa(){
         return $this->belongsTo(
             Adocao::class,
-            'id_animal',
-            'id_animal'
+            'id_historico_pessoa',
+            'id_historico_pessoa'
+        );
+    }
+
+    public function Sexo(){
+        return $this->belongsTo(
+            Sexo::class,
+            'pessoa_id_pessoa',
+            'id_pessoa'
+        );
+    }
+
+    public function Adocao(){
+        return $this->belongsTo(
+            Adocao::class,
+            'pessoa_id_pessoa',
+            'id_pessoa'
         );
     }
 

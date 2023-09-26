@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Historico_Animal;
+use App\Models\HistoricoAnimal;
 use Illuminate\Http\Request;
 
 class HistoricoAnimalController extends Controller
@@ -34,7 +34,7 @@ class HistoricoAnimalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Historico_Animal $historico_Animal)
+    public function show(HistoricoAnimal $HistoricoAnimal)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoricoAnimalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Historico_Animal $historico_Animal)
+    public function edit(HistoricoAnimal $HistoricoAnimal)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoricoAnimalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Historico_Animal $historico_Animal)
+    public function update(Request $request, HistoricoAnimal $HistoricoAnimal)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoricoAnimalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Historico_Animal $historico_Animal)
+    public function destroy(HistoricoAnimal $HistoricoAnimal)
     {
         //
     }

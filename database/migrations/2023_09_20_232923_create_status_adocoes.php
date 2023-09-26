@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('status_adocoes', function (Blueprint $table) {
             $table->increments('id_status_adocao');
-            $table->string('status_adocao',100);
+            $table->string('statusAdocao',100);
             $table->timestamps();
             $table->softDeletes();
 

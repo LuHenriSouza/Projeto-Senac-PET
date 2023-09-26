@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Pessoa
 ;
 
-class HistoricoPessoa extends Model
+class id_historico_pessoa extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $table = 'HistoricoPessoa';
-    protected $primaryKey = 'id_HistoricoPessoa';
+    protected $table = 'id_historico_pessoa';
+    protected $primaryKey = 'id_historico_pessoa';
     protected $dates = [
         'created_at',
         'updated_at',
@@ -21,7 +21,7 @@ class HistoricoPessoa extends Model
     ];
 
     protected $fillable = [
-        'HistoricoPessoa'
+        'id_historico_pessoa'
 
     ];
 
@@ -31,8 +31,8 @@ class HistoricoPessoa extends Model
     public function pessoa(){
         return $this->belongsTo(
             pessoa::class,
-            'id_HistoricoPessoa',
-            'id_HistoricoPessoa'
+            'id_historico_pessoa',
+            'id_historico_pessoa'
         );
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Animais;
 
-class Historico_Animal extends Model
+class HistoricoAnimal extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -20,7 +20,7 @@ class Historico_Animal extends Model
     ];
 
     protected $fillable = [
-        'historico_animal'
+        'HistoricoAnimal'
 
     ];
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Animais;
 
-class Status_Adocao extends Model
+class statusAdocao extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -20,7 +20,7 @@ class Status_Adocao extends Model
     ];
 
     protected $fillable = [
-        'status_adocao'
+        'statusAdocao'
 
     ];
 
