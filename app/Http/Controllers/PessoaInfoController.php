@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pessoa;
+use App\Models\PessoaInfo;
 use Illuminate\Http\Request;
 
-class PessoaController extends Controller
+class PessoaInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,13 +28,13 @@ class PessoaController extends Controller
      */
     public function store(Request $request)
     {
-        return view('projeto.dashboard');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Pessoa $pessoa)
+    public function show(PessoaInfo $pessoaInfo)
     {
         //
     }
@@ -42,7 +42,7 @@ class PessoaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pessoa $pessoa)
+    public function edit(PessoaInfo $pessoaInfo)
     {
         //
     }
@@ -50,7 +50,7 @@ class PessoaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pessoa $pessoa)
+    public function update(Request $request, PessoaInfo $pessoaInfo)
     {
         //
     }
@@ -58,7 +58,7 @@ class PessoaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pessoa $pessoa)
+    public function destroy(PessoaInfo $pessoaInfo)
     {
         //
     }

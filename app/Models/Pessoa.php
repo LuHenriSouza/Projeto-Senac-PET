@@ -61,4 +61,7 @@ class Pessoa extends Model
         );
     }
 
+    public function Pessoa_Info(){
+        return $this->hasOne(PessoaInfo::class);
+    }
 }

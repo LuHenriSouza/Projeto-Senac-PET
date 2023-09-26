@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\ProfileController;
+use App\Models\PessoaInfo;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',function () {
+Route::get('/', function () {
     return redirect(route('dashboard'));
 });
 
@@ -18,8 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/adotar', function(){
+
+Route::get('/adotar', function () {
     return view('projeto.adotar');
 })->name('adotar');
 
-require __DIR__.'/auth.php';
+Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
+
+require __DIR__ . '/auth.php';

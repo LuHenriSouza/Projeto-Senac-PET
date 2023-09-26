@@ -11,23 +11,23 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4" placeholder="Endereço"
-                                    style="height: 55px;">
+                                    style="height: 55px;" name="endereco">
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4" placeholder="CEP"
-                                    style="height: 55px;">
+                                    style="height: 55px;" name="cep">
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4" placeholder="Cidade"
-                                    style="height: 55px;">
+                                    style="height: 55px;" name="cidade">
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4" placeholder="Estado"
-                                    style="height: 55px;">
+                                    style="height: 55px;" name="estado">
                             </div>
                             <div class="col-12">
                                 <input type="email" class="form-control border-0 px-4" placeholder="Telefone"
-                                    style="height: 55px;">
+                                    style="height: 55px;" name="telefone">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" style="max-width: 200px;" type="button" id="botaoProximo" data-target="#elemento-alvo">Próximo</button>
