@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\{
     Animais,
     Pessoa,
-    Historico_Adocao
+    HistoricoAdocao
 };
 
 class Adocao extends Model
@@ -27,7 +27,7 @@ class Adocao extends Model
         'adocao',
         'id_pessoa',
         'id_animal',
-        'id_historico_adocao'
+        'id_HistoricoAdocao'
 
     ];
 
@@ -49,9 +49,9 @@ class Adocao extends Model
         );
     }
 
-    public function historico_adocao(){
+    public function HistoricoAdocao(){
         return $this->belongsTo(
-            Historico_Adocao::class,
+            HistoricoAdocao::class,
             'id_adocao',
             'id_adocao'
         );

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('historicos_adocoes', function (Blueprint $table) {
             $table->increments('id_historicos_adocoes');
-            $table->text('historico_adocao');
+            $table->text('HistoricoAdocao');
             $table->timestamps();
             $table->softDeletes();
 

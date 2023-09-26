@@ -64,5 +64,29 @@ class Animais extends Model
         );
     }
 
+    public function sexo(){
+        return $this->belongsTo(
+            Sexo::class,
+            'id_animal',
+            'id_animal'
+        );
+    }
+
+    public function historico_animal(){
+        return $this->belongsTo(
+            Historico_Animal::class,
+            'id_animal',
+            'id_animal'
+        );
+    }
+
+    public function tamanho(){
+        return $this->belongsTo(
+            Tamanho::class,
+            'id_animal',
+            'id_animal'
+        );
+    }
+
 
 }

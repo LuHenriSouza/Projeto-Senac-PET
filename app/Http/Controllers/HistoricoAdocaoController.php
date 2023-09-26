@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Historico_Adocao;
+use App\Models\HistoricoAdocao;
 use Illuminate\Http\Request;
 
 class HistoricoAdocaoController extends Controller
@@ -34,7 +34,7 @@ class HistoricoAdocaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Historico_Adocao $historico_Adocao)
+    public function show(HistoricoAdocao $HistoricoAdocao)
     {
         //
     }
@@ -42,7 +42,7 @@ class HistoricoAdocaoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Historico_Adocao $historico_Adocao)
+    public function edit(HistoricoAdocao $HistoricoAdocao)
     {
         //
     }
@@ -50,7 +50,7 @@ class HistoricoAdocaoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Historico_Adocao $historico_Adocao)
+    public function update(Request $request, HistoricoAdocao $HistoricoAdocao)
     {
         //
     }
@@ -58,7 +58,7 @@ class HistoricoAdocaoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Historico_Adocao $historico_Adocao)
+    public function destroy(HistoricoAdocao $HistoricoAdocao)
     {
         //
     }
