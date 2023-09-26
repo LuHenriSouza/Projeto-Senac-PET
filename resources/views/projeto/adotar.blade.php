@@ -51,27 +51,52 @@
     {{-- /CONTENT --}}
 @endsection
 @section('scripts')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        $(document).ready(function() {
+            var botaoDesejado = $("#pills-2-tab");
+            var meuBotao = $("#botaoProximo"); // referenciando um botão em [cadastro-pessoa.blade.php] !
 
-            var botaoDesejado = document.getElementById("pills-2-tab");
+            meuBotao.on("click", function() {
+                var elementoAlvoID = meuBotao.data("target");
+                var elementoAlvo = $(elementoAlvoID);
 
-            var meuBotao = document.getElementById(
-                "botaoProximo"); // referenciando um botao em [cadastro-pessoa.blade.php] !
+                // var campo1 = $("#campo-1").val();
+                // var campo2 = $("#campo-2").val();
+                // var campo3 = $("#campo-3").val();
+                // var campo4 = $("#campo-4").val();
+                // var campo5 = $("#campo-5").val();
 
-            // Adicione um ouvinte de clique ao botão personalizado
-            meuBotao.addEventListener("click", function() {
-                var elementoAlvoID = meuBotao.getAttribute("data-target");
-                var elementoAlvo = document.querySelector(elementoAlvoID);
-                if (elementoAlvo) {
+                // if (!campo1) {
+                //     $("#erro-campo1").text("Endereço é obrigatório.");
+                // }
+                // if (!campo2) {
+                //     $("#erro-campo2").text("CEP é obrigatório.");
+                // }
+                // if (!campo3) {
+                //     $("#erro-campo3").text("Cidade é obrigatório.");
+                // }
+                // if (!campo4) {
+                //     $("#erro-campo4").text("Estado é obrigatório.");
+                // }
+                // if (!campo5) {
+                //     $("#erro-campo5").text("Telefone é obrigatório.");
+                // }
+                // if (!campo1 || !campo2 || !campo3 || !campo4 || !campo5) {
+                //     return;
+                // }
+
+                if (elementoAlvo.length) {
                     // Role a página até o elemento-alvo
-                    elementoAlvo.scrollIntoView({
+                    elementoAlvo[0].scrollIntoView({
                         behavior: "smooth" // Para uma rolagem suave, adicione este parâmetro
                     });
+
                     // Dispare o clique no botão desejado
                     botaoDesejado.click();
                 }
             });
         });
     </script>
+    <script></script>
 @endsection
