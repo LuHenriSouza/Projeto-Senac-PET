@@ -27,7 +27,7 @@ class Adocao extends Model
         'adocao',
         'id_pessoa',
         'id_animal',
-        'id_HistoricoAdocao'
+        'id_historicos_adocoes'
 
     ];
 
@@ -41,6 +41,7 @@ class Adocao extends Model
         );
     }
 
+
     public function pessoa(){
         return $this->belongsTo(
             Pessoa::class,
@@ -49,7 +50,7 @@ class Adocao extends Model
         );
     }
 
-    public function HistoricoAdocao(){
+    public function historicoAdocao(){
         return $this->belongsTo(
             HistoricoAdocao::class,
             'id_adocao',
