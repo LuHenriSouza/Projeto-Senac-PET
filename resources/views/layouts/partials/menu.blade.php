@@ -44,18 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">Sobre nós</a>
-                <a href="service.html" class="nav-item nav-link">Serviços</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                    </div>
-                </div>
+                <a href="#sobrenos" class="nav-item nav-link">Sobre nós</a>
                 @guest
                     <a href="{{ route('register') }}"
                         class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Criar Conta <i

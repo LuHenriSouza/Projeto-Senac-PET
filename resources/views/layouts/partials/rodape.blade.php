@@ -31,14 +31,21 @@
 
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Cadastre-se</h5>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Seu Email">
-                            <button class="btn btn-primary">Cadastrar</button>
-                        </div>
-                    </form>
-                    <h6 class="text-uppercase mt-4 mb-3">Siga-nos</h6>
+                    @guest
+                        <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Cadastre-se</h5>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control p-3" placeholder="Seu Email">
+                                <button class="btn btn-primary">Cadastrar</button>
+                            </div>
+                        </form>
+                    @endguest
+                    @auth
+                        <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Siga-nos</h5>
+                    @endauth
+                    @guest
+                        <h6 class="text-uppercase mt-4 mb-3">Siga-nos</h6>
+                    @endguest
                     <div class="d-flex">
                         <a class="btn btn-outline-primary btn-square me-2" href="#"><i
                                 class="bi bi-twitter"></i></a>
@@ -48,6 +55,9 @@
                                 class="bi bi-linkedin"></i></a>
                         <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
                     </div>
+
+
+
                 </div>
                 <div class="col-12 text-center text-body">
                     <a class="text-body" href="">Termos e Condições</a>

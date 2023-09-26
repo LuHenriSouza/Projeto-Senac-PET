@@ -12,12 +12,12 @@
                                     <i class="bi bi-chat-square-quote text-primary"></i>
                                 </div>
                             </div>
-                            <p>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
-                                lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat. Erat dolor rebum sit
-                                ipsum.</p>
+                            <p>A Patinha Feliz é incrível! Adotei meu gato, Whiskers, através deles e não poderia estar
+                                mais feliz. Eles fazem um trabalho maravilhoso cuidando dos animais e encontrando lares
+                                amorosos para eles. Altamente recomendado!</p>
                             <hr class="w-25 mx-auto">
-                            <h5 class="text-uppercase">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="text-uppercase">Ana S. Almeida</h5>
+                            <span>Dona de Casa</span>
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-4">
@@ -27,12 +27,12 @@
                                     <i class="bi bi-chat-square-quote text-primary"></i>
                                 </div>
                             </div>
-                            <p>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
-                                lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat. Erat dolor rebum sit
-                                ipsum.</p>
+                            <p>Adotei meu adorável cachorro, Rex, com a ajuda da Patinha Feliz. A equipe foi super
+                                atenciosa e prestativa durante todo o processo de adoção. Rex trouxe tanta alegria à
+                                minha vida, e estou muito grato por esta organização maravilhosa.</p>
                             <hr class="w-25 mx-auto">
-                            <h5 class="text-uppercase">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="text-uppercase">Pablo Escobar</h5>
+                            <span>Uber</span>
                         </div>
                     </div>
                 </div>
