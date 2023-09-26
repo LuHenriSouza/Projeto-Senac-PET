@@ -51,7 +51,7 @@
                             class="bi bi-arrow-right"></i></a>
                 @endguest
                 @auth
-                <a href="{{ route('register') }}"
+                <a href="{{ route('adotar') }}"
                 class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
                     class="bi bi-arrow-right"></i></a>
                 @endauth
