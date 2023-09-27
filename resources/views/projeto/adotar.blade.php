@@ -173,4 +173,21 @@
             // O botão será ativado automaticamente quando todos os campos estiverem preenchidos
         });
     </script>
+    <script>
+        function formatarTelefone(input) {
+            // Remove qualquer caractere que não seja dígito
+            var numeroTelefone = input.value.replace(/\D/g, '');
+
+            // Formate o número de telefone de acordo com o tamanho
+            if (numeroTelefone.length >= 3) {
+                numeroTelefone = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2);
+            }
+            if (numeroTelefone.length >= 11) {
+                numeroTelefone = numeroTelefone.substring(0, 10) + '-' + numeroTelefone.substring(10);
+            }
+
+            // Atualize o valor do campo de entrada
+            input.value = numeroTelefone;
+        }
+    </script>
 @endsection
