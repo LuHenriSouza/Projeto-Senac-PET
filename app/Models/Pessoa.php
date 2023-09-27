@@ -15,7 +15,7 @@ class Pessoa extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'pessoa';
+    protected $table = 'pessoas';
     protected $primaryKey = 'id_pessoa';
     protected $dates = [
         'created_at',
@@ -24,15 +24,15 @@ class Pessoa extends Model
     ];
 
     protected $fillable = [
-        'nome',
-        'email',
+        'id_user',
         'telefone',
-        'endereco',
         'cep',
-        'residencia_desc',
+        'estado',
         'cidade',
-        'id_id_historico_pessoa'
-
+        'endereco',
+        'bairro',
+        'residencia_desc',
+        'numero'
     ];
 
     //Relacionamento
