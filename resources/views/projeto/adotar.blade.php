@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <!-- Hero Start -->
+    <!-- Banner Start -->
     <div class="container-fluid bg-primary py-5 mb-5 hero-header2">
         <div class="container py-5">
             <div class="row justify-content-start">
@@ -12,12 +12,12 @@
             </div>
         </div>
     </div>
-    <!-- Hero End -->
+    <!-- Banner End -->
 
     {{-- CONTENT --}}
     <div class="container" id="elemento-alvo">
         <div class="col-lg-7">
-            <form action="" method="POST">
+            <form action="" method="GET">
                 @csrf
                 <div class="bg-light p-4">
                     <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
@@ -58,17 +58,19 @@
             var meuBotao = $("#botaoProximo"); // referenciando um botão em [cadastro-pessoa.blade.php] !
 
             meuBotao.on("click", function() {
-                var elementoAlvoID = meuBotao.data("target");
-                var elementoAlvo = $(elementoAlvoID);
+                if ($('#rua').val() && $('#cep').val().length === 8) {
+                    var elementoAlvoID = meuBotao.data("target");
+                    var elementoAlvo = $(elementoAlvoID);
 
-                if (elementoAlvo.length) {
-                    // Role a página até o elemento-alvo
-                    elementoAlvo[0].scrollIntoView({
-                        behavior: "smooth" // Para uma rolagem suave, adicione este parâmetro
-                    });
+                    if (elementoAlvo.length) {
+                        // Role a página até o elemento-alvo
+                        elementoAlvo[0].scrollIntoView({
+                            behavior: "smooth" // Para uma rolagem suave, adicione este parâmetro
+                        });
 
-                    // Dispare o clique no botão desejado
-                    botaoDesejado.click();
+                        // Dispare o clique no botão desejado
+                        botaoDesejado.click();
+                    }
                 }
             });
         });
@@ -138,6 +140,37 @@
                     }
                 }
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Selecione o botão e desabilite-o inicialmente
+            var meuBotao = $("#botaoProximo");
+            var botao2passo = $("#pills-2-tab");
+            meuBotao.prop("disabled", true);
+            botao2passo.prop("disabled", true);
+
+            // Selecione todos os campos de entrada no formulário
+            var camposDeEntrada = $("input.parte1");
+
+            // Adicione um ouvinte de evento de entrada para cada campo de entrada
+            camposDeEntrada.on("input", function() {
+                // Verifique se todos os campos de entrada têm um valor
+                var todosPreenchidos = true;
+                camposDeEntrada.each(function() {
+                    if ($(this).val() === "") {
+                        todosPreenchidos = false;
+                        return false; // Sai do loop quando um campo estiver vazio
+                    }
+                });
+
+                // Ative ou desative o botão com base na condição
+                meuBotao.prop("disabled", !todosPreenchidos);
+                botao2passo.prop("disabled", !todosPreenchidos);
+            });
+
+            // O código acima irá desabilitar o botão até que todos os campos estejam preenchidos
+            // O botão será ativado automaticamente quando todos os campos estiverem preenchidos
         });
     </script>
 @endsection

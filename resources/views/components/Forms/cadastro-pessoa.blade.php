@@ -10,36 +10,36 @@
                     <form action="">
                         <div class="row g-3">
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="CEP"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="CEP"
                                     style="height: 55px;" name="cep" id="cep" maxlength="8">
                                 <span class="erro"></span>
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="Endereço"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Endereço"
                                     style="height: 55px;" name="rua" id="rua" readonly>
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="Bairro"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Bairro"
                                     style="height: 55px;" name="bairro" id="bairro" readonly>
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="Cidade"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Cidade"
                                     style="height: 55px;" name="cidade" id="cidade" readonly>
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="Estado"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Estado"
                                     style="height: 55px;" name="uf" id="uf" readonly>
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4" placeholder="Nº"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Nº"
                                     style="height: 55px;" name="numero" id="numero">
                             </div>
                             <div class="col-12">
-                                <input required type="text" class="form-control border-0 px-4"
+                                <input type="text" class="form-control border-0 px-4"
                                     placeholder="Complemento" style="height: 55px;" name="complemento" id="complemento">
                             </div>
                             <div class="col-12">
-                                <input required type="email" class="form-control border-0 px-4" placeholder="Telefone"
+                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Telefone"
                                     style="height: 55px;" name="telefone" id="campo-5">
                                 <span class="erro"></span>
                             </div>
