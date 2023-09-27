@@ -17,7 +17,8 @@ class SexoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'sexo' => fake()->randomElements(['M', 'F'])
+
         ];
     }
 }

@@ -17,7 +17,8 @@ class id_historico_pessoaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'historico_pessoa' => fake()->paragraph(1)
+
         ];
     }
 }
