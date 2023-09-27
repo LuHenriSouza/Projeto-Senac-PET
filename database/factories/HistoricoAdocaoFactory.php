@@ -17,7 +17,7 @@ class HistoricoAdocaoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'historico_adocao' => fake()->paragraph(1)
         ];
     }
 }

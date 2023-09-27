@@ -17,7 +17,7 @@ class StatusAdocaoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'status_adocao'=>fake()->randomElements(['S', 'N'])
         ];
     }
 }

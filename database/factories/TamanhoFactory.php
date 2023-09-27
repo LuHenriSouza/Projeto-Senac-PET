@@ -17,7 +17,7 @@ class TamanhoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'tamanho'=>fake()->randomElements(['P', 'M', 'G'])
         ];
     }
 }
