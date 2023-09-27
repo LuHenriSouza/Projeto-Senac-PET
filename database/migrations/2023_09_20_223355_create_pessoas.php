@@ -10,16 +10,19 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id_pessoa');
-            $table->string('nome',70)->nullable();
-            $table->string('email',45)->nullable();
-            $table->char('telefone',11)->nullable();
-            $table->text('endereco')->nullable();
-            $table->char('cep',8)->nullable();
+            $table->unsignedInteger('id_user');
+            $table->char('telefone',11);
+            $table->char('cep',8);
+            $table->string('estado',45);
+            $table->string('cidade',45);
+            $table->string('endereco',100);
+            $table->string('numero',10);
+            $table->string('bairro',45);
             $table->text('residencia_desc')->nullable();
-            $table->string('cidade',45)->nullable();
             $table->timestamps();
             $table->softDeletes();
 
+            $table->foreign('id_user')->references('id')->on('users');
 
         });
     }

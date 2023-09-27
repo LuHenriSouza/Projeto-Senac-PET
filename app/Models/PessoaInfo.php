@@ -23,7 +23,7 @@ class PessoaInfo extends Model
         'animal_guarda',
         'qnt_pessoa_casa',
         'motivacao',
-        'observacoes',
+        'observacoes'
     ];
 
     // Relacionamento
