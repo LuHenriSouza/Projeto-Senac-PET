@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('endereco',100);
             $table->string('numero',10);
             $table->string('bairro',45);
-            $table->text('residencia_desc')->nullable();
+            $table->text('residencia_desc');
             $table->timestamps();
             $table->softDeletes();
 
