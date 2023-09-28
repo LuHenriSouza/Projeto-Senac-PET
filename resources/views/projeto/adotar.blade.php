@@ -17,7 +17,7 @@
     {{-- CONTENT --}}
     <div class="container" id="elemento-alvo">
         <div class="col-lg-7">
-            <form action="" method="GET">
+            <form action="" method="post">
                 @csrf
                 <div class="bg-light p-4">
                     <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">

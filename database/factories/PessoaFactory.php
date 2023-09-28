@@ -17,7 +17,13 @@ class PessoaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nome'=>fake()->name(),
+            'email'=>fake()->email(),
+            'telefone'=>fake()->phoneNumber(11),
+            'endereco'=>fake()->address(),
+            'cep'=>fake()->postcode(),
+            'residencia_desc'=>fake()->paragraph(1),
+            'cidade'=>fake()->city()
         ];
     }
 }

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('animais', function (Blueprint $table) {
             $table->increments('id_animal');
-            $table->string('nome',45)->nullable();
-            $table->string('cor',45)->nullable();
-            $table->integer('idade')->nullable();
+            $table->string('nome',45);
+            $table->string('cor',45);
+            $table->integer('idade');
             $table->timestamps();
             $table->softDeletes();
         });

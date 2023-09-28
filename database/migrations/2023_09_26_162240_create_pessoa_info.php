@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('animal_guarda');
             $table->integer('qnt_pessoa_casa');
             $table->text('motivacao');
-            $table->text('observacoes');
+            $table->text('observacoes')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

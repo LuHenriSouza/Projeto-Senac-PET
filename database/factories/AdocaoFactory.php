@@ -17,7 +17,7 @@ class AdocaoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'adocao' => fake()->paragraph(1)
         ];
     }
 }

@@ -17,7 +17,8 @@ class HistoricoAnimalFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'historico_animal' => fake()->paragraph(1)
+
         ];
     }
 }
