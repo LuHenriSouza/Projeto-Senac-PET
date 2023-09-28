@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4 parte1" placeholder="Telefone"
-                                    style="height: 55px;" name="telefone" id="campo-5">
+                                    style="height: 55px;" name="telefone" id="campo-5" oninput="formatarTelefone(this)" maxlength="15">
                                 <span class="erro"></span>
                             </div>
                             <div class="col-12">
