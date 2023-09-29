@@ -53,7 +53,8 @@
                                 class="bi bi-facebook"></i></a>
                         <a class="btn btn-outline-primary btn-square me-2" href="#"><i
                                 class="bi bi-linkedin"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="#"><i
+                                class="bi bi-instagram"></i></a>
                     </div>
 
 
