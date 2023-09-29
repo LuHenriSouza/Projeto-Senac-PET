@@ -18,15 +18,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/adotar', function () {
+        return view('projeto.adotar');
+    })->name('adotar');
+
+    Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 });
-
-
-Route::get('/adotar', function () {
-    return view('projeto.adotar');
-})->name('adotar');
-
-Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
-
-Route::get('/consultar-cep-ajax/{cep}', 'CEPController@consultarCEPAjax');
 
 require __DIR__ . '/auth.php';

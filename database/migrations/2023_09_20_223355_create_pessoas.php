@@ -11,14 +11,14 @@ return new class extends Migration
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id_pessoa');
             $table->unsignedInteger('id_user');
-            $table->char('telefone',11);
+            $table->char('telefone',20);
             $table->char('cep',8);
             $table->string('estado',45);
             $table->string('cidade',45);
             $table->string('endereco',100);
             $table->string('numero',10);
             $table->string('bairro',45);
-            $table->text('residencia_desc');
+            $table->text('residencia_desc')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

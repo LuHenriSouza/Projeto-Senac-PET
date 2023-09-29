@@ -58,7 +58,7 @@
             var meuBotao = $("#botaoProximo"); // referenciando um botão em [cadastro-pessoa.blade.php] !
 
             meuBotao.on("click", function() {
-                if ($('#rua').val() && $('#cep').val().length === 8) {
+                if ($('#rua').val() && $('#cep').val().length === 8 && $('#campo-5').val().length > 14) {
                     var elementoAlvoID = meuBotao.data("target");
                     var elementoAlvo = $(elementoAlvoID);
 
@@ -86,11 +86,17 @@
                 $("#cidade").val("");
                 $("#uf").val("");
                 $("#ibge").val("");
+                $('#cep').prop("disabled", false);
+                $('#custom-loader-cep').addClass("d-none");
             }
 
             //Quando o campo cep perde o foco.
             $("#cep").on('input', function() {
+
                 if ($(this).val().length === 8) {
+
+                    $(this).prop("disabled", true);
+                    $('#custom-loader-cep').removeClass("d-none");
                     //Nova variável "cep" somente com dígitos.
                     var cep = $(this).val().replace(/\D/g, '');
 
@@ -121,6 +127,8 @@
                                     $("#cidade").val(dados.localidade);
                                     $("#uf").val(dados.uf);
                                     $("#ibge").val(dados.ibge);
+                                    $('#cep').prop("disabled", false);
+                                    $('#custom-loader-cep').addClass("d-none");
                                 } //end if.
                                 else {
                                     //CEP pesquisado não foi encontrado.
@@ -148,6 +156,7 @@
             // Selecione o botão e desabilite-o inicialmente
             var meuBotao = $("#botaoProximo");
             var botao2passo = $("#pills-2-tab");
+
             meuBotao.prop("disabled", true);
             botao2passo.prop("disabled", true);
 
@@ -173,5 +182,22 @@
             // O código acima irá desabilitar o botão até que todos os campos estejam preenchidos
             // O botão será ativado automaticamente quando todos os campos estiverem preenchidos
         });
+    </script>
+    <script>
+        function formatarTelefone(input) {
+            // Remove qualquer caractere que não seja dígito
+            var numeroTelefone = input.value.replace(/\D/g, '');
+
+            // Formate o número de telefone de acordo com o tamanho
+            if (numeroTelefone.length >= 3) {
+                numeroTelefone = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2);
+            }
+            if (numeroTelefone.length >= 11) {
+                numeroTelefone = numeroTelefone.substring(0, 10) + '-' + numeroTelefone.substring(10);
+            }
+
+            // Atualize o valor do campo de entrada
+            input.value = numeroTelefone;
+        }
     </script>
 @endsection
