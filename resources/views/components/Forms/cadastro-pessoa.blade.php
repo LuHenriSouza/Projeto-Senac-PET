@@ -12,7 +12,10 @@
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4 parte1" placeholder="CEP"
                                     style="height: 55px;" name="cep" id="cep" maxlength="8">
-                                <span class="erro"></span>
+                                    <span class="erro" id="erro-cep"></span>
+                            </div>
+                            <div class="col-12 d-none" id="custom-loader-cep">
+                                <div class="custom-loader"></div>
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4 parte1" placeholder="Endereço"
@@ -33,15 +36,17 @@
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4 parte1" placeholder="Nº"
                                     style="height: 55px;" name="numero" id="numero">
+                                    <span class="erro" id="erro-num"></span>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4"
-                                    placeholder="Complemento" style="height: 55px;" name="complemento" id="complemento">
+                                <input type="text" class="form-control border-0 px-4" placeholder="Complemento"
+                                    style="height: 55px;" name="complemento" id="complemento">
                             </div>
                             <div class="col-12">
                                 <input type="text" class="form-control border-0 px-4 parte1" placeholder="Telefone"
-                                    style="height: 55px;" name="telefone" id="campo-5" oninput="formatarTelefone(this)" maxlength="15">
-                                <span class="erro"></span>
+                                    style="height: 55px;" name="telefone" id="campo-5"
+                                    oninput="formatarTelefone(this)" maxlength="15">
+                                <span class="erro" id="erro-tel"></span>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" style="max-width: 200px;" type="button"
