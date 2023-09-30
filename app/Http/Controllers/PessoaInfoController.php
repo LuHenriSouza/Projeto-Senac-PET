@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pessoa;
 use App\Models\PessoaInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PessoaInfoController extends Controller
 {
@@ -20,7 +22,9 @@ class PessoaInfoController extends Controller
      */
     public function create()
     {
-        //
+        $temCadastro = Pessoa::find(Auth::user()->id);
+
+        return view('projeto.adotar',compact('temCadastro'));
     }
 
     /**
