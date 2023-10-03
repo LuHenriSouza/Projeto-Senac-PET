@@ -26,4 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 });
 
+Route::get('/test', function () {
+    return view('projeto.test');
+});
+
 require __DIR__ . '/auth.php';
