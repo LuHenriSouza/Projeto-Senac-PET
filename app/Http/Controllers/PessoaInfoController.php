@@ -22,9 +22,7 @@ class PessoaInfoController extends Controller
      */
     public function create()
     {
-        $temCadastro = Pessoa::find(Auth::user()->id);
-
-        return view('projeto.adotar',compact('temCadastro'));
+        return view('projeto.adotar');
     }
 
     /**
