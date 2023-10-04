@@ -10,7 +10,7 @@
                     <form action="">
                         <div class="row g-3">
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="CEP"
+                                <input type="text" class="form-control border-0 px-4 parte1 bg-light" placeholder="CEP"
                                     style="height: 55px;" name="cep" id="cep" maxlength="8">
                                     <span class="erro" id="erro-cep"></span>
                             </div>
@@ -34,16 +34,16 @@
                                     style="height: 55px;" name="uf" id="uf" readonly>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Nº"
+                                <input type="text" class="form-control border-0 px-4 parte1 bg-light" placeholder="Nº"
                                     style="height: 55px;" name="numero" id="numero">
                                     <span class="erro" id="erro-num"></span>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4" placeholder="Complemento"
+                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Complemento"
                                     style="height: 55px;" name="complemento" id="complemento">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4 parte1" placeholder="Telefone"
+                                <input type="text" class="form-control border-0 px-4 bg-light parte1" placeholder="Telefone"
                                     style="height: 55px;" name="telefone" id="campo-5"
                                     oninput="formatarTelefone(this)" maxlength="15">
                                 <span class="erro" id="erro-tel"></span>
