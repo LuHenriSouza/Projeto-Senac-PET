@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\animais;
+use App\Models\Especie;
+use App\Models\Raca;
+use App\Models\Sexo;
+use App\Models\Tamanho;
 use Illuminate\Http\Request;
 
 class AnimaisController extends Controller
@@ -20,7 +24,12 @@ class AnimaisController extends Controller
      */
     public function create()
     {
-        //
+        $sexos = Sexo::get();
+        $tamanhos = Tamanho::get();
+        $especies = Especie::get();
+        $racas = Raca::get();
+
+        return view('projeto.test')->with(compact('sexos','tamanhos','especies','racas'));
     }
 
     /**
