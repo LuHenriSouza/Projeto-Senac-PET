@@ -43,6 +43,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
+                @auth
+                    <a href="{{ route('work') }}" class="nav-item nav-link text-primary">Área do Funcionário</a>
+                @endauth
                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Home</a>
                 <a href="#sobrenos" class="nav-item nav-link">Sobre nós</a>
                 @guest

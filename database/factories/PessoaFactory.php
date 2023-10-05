@@ -16,14 +16,18 @@ class PessoaFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
-            'nome'=>fake()->name(),
-            'email'=>fake()->email(),
-            'telefone'=>fake()->phoneNumber(11),
-            'endereco'=>fake()->address(),
-            'cep'=>fake()->postcode(),
+            'id_user'=> '1',
+            'telefone'=>fake()->cellphoneNumber(),
+            'endereco'=>fake()->streetAddress(),
+            'numero'=>fake()->numberBetween(1,300),
+            'cep'=>fake()->numberBetween(11111111,99999999),
+            'cpf'=>fake()->cpf(false),
             'residencia_desc'=>fake()->paragraph(1),
-            'cidade'=>fake()->city()
+            'cidade'=>fake()->city(),
+            'estado'=>fake()->state(),
+            'bairro'=>fake()->words(3, true)
         ];
     }
 }

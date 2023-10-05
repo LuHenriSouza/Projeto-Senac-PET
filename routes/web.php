@@ -18,8 +18,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
+    Route::get('/work',function () {
+        return view('projeto.funcionario');
+    })->name('work');
 });
+
+Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 
 Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
