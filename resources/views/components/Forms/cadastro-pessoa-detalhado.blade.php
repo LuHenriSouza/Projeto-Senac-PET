@@ -39,40 +39,15 @@
                         <div class="col-12">
                             <p class="fs-5 text-dark mb-2" for="historico">quantas pessoas moram na sua casa?</p>
                             <div class="d-flex">
-                                @for ($i = 1; $i < 6; $i++)
-                                    <div class="form-check me-2">
-                                        <input class="form-check-input" type="radio" name="radioQNT"
-                                            id="flexRadioDefault{{ $i }}">
-                                        <label class="form-check-label" for="flexRadioDefault{{ $i }}">
-                                            {{ $i }}
-                                        </label>
-                                    </div>
-                                @endfor
-                                <div class="form-check me-2">
-                                    <input class="form-check-input" type="radio" name="radioQNT" id="radioQNT">
-                                    <label class="form-check-label" for="radioQNT">
-                                        6 ou mais
-                                    </label>
-                                </div>
+                                <select class="form-select border-0 px-4" name="qnt" id="qnt"
+                                    style="height: 55px;" aria-label="Default select example">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        <option value="{{ $i }}">{{ $i }}</option>
+                                    @endfor
+                                    <option value="6">6 ou mais</option>
+                                </select>
                             </div>
                         </div>
-                        {{-- <div class="col-12">
-                                <div class="d-flex">
-                                    <p class="fs-5 text-dark">De 0 a 5 quanto sua casa é aberta?</p>
-                                    <p class="fs-6 ms-2 mt-1">(posteriormente será necessário enviar fotos)</p>
-                                </div>
-                                <div class="d-flex">
-                                    @for ($i = 1; $i < 6; $i++)
-                                        <div class="form-check me-2">
-                                            <input class="form-check-input" type="radio" name="radioTMN"
-                                                id="radioTMN{{ $i }}">
-                                            <label class="form-check-label" for="radioTMN{{ $i }}">
-                                                {{ $i }}
-                                            </label>
-                                        </div>
-                                    @endfor
-                                </div>
-                            </div> --}}
                         <div class="col-12">
                             <label for="motivo" class="fs-5 text-dark mb-2">Em poucas palavras diga o por quê de
                                 querer adotar um animal</label>

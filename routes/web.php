@@ -27,4 +27,6 @@ Route::get('/adotar', function () {
 
 Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 
+Route::get('/consultar-cep-ajax/{cep}', 'CEPController@consultarCEPAjax');
+
 require __DIR__ . '/auth.php';

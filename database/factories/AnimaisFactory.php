@@ -17,7 +17,9 @@ class AnimaisFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nome' => fake()->name(),
+            'cor' => fake()->colorName(),
+            'idade' => fake()->randomDigitNotNull()
         ];
     }
 }

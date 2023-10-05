@@ -46,14 +46,15 @@
                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Home</a>
                 <a href="#sobrenos" class="nav-item nav-link">Sobre nós</a>
                 @guest
+                    <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                     <a href="{{ route('register') }}"
                         class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Criar Conta <i
                             class="bi bi-arrow-right"></i></a>
                 @endguest
                 @auth
-                <a href="{{ route('adotar') }}"
-                class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
-                    class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('adotar') }}"
+                        class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
+                            class="bi bi-arrow-right"></i></a>
                 @endauth
             </div>
         </div>
