@@ -24,4 +24,9 @@ Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
 
+Route::get('/cadanimal', //function (){return view('projeto.test');}
+[AnimaisController::class, 'create']
+)->name('cadanimal');
+
+
 require __DIR__ . '/auth.php';
