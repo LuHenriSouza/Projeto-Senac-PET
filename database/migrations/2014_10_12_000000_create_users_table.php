@@ -20,8 +20,14 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-    }
 
+        \App\Models\User::factory()->create([
+            'name' => 'Luiz',
+            'email' => 'luiz@gmail.com',
+            'password' => '$10$QTFwzTGfROLWoYor4uAvTO7i4Wx77YzOHeAlyByAM8bor1aioyaJy' //20032002l
+        ]);
+
+    }
     /**
      * Reverse the migrations.
      */
