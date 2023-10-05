@@ -32,5 +32,7 @@ Route::get('/cadanimal', //function (){return view('projeto.test');}
 [AnimaisController::class, 'create']
 )->name('cadanimal');
 
+// cometario teste
+
 
 require __DIR__ . '/auth.php';
