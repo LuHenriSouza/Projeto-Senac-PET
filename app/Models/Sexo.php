@@ -14,7 +14,7 @@ class Sexo extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'id_sexo';
+    protected $table = 'sexos';
     protected $primaryKey = 'id_sexo';
     protected $dates = [
         'created_at',
