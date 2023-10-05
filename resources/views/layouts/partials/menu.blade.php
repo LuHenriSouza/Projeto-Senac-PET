@@ -36,26 +36,24 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
         <a href="{{ route('dashboard') }}" class="navbar-brand ms-lg-5">
-            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Patinha Feliz</h1>
+            <h1 class="m-0 text-uppercase text-dark"><i class="fa-solid fa-paw text-primary"></i> Patinha Feliz</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
+                @auth
+                    <a href="{{ route('work') }}" class="nav-item nav-link text-primary">Área do Funcionário</a>
+                @endauth
                 <a href="{{ route('dashboard') }}" class="nav-item nav-link">Home</a>
                 <a href="#sobrenos" class="nav-item nav-link">Sobre nós</a>
                 @guest
                     <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
-                    <a href="{{ route('register') }}"
-                        class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Criar Conta <i
-                            class="bi bi-arrow-right"></i></a>
                 @endguest
-                @auth
-                    <a href="{{ route('adotar') }}"
-                        class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
-                            class="bi bi-arrow-right"></i></a>
-                @endauth
+                <a href="{{ route('adotar') }}"
+                    class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Adotar <i
+                        class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </nav>

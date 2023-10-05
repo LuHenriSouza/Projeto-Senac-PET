@@ -1,54 +1,8 @@
 @extends('layouts.main')
 @section('content')
-    <!-- Banner Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header2">
-        <div class="container py-5">
-            <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="display-1 text-uppercase mb-lg-4" style="color: #00ab00">Adote Agora</h1>
-                    <h1 class="text-uppercase text-white mb-lg-4">Saiba como adotar</h1>
-                    <p class="fs-4 text-white mb-lg-4">Para adotar é preciso seguir os passos adiantes:</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Banner End -->
+    @include('components.Forms.cadastro-pessoa')
 
-    {{-- CONTENT --}}
-    <div class="container" id="elemento-alvo">
-        <div class="col-lg-7">
-            <form action="" method="post">
-                @csrf
-                <div class="bg-light p-4">
-                    <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item w-50" role="presentation">
-                            <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
-                                aria-selected="true">1º Passo</button>
-                        </li>
-                        <li class="nav-item w-50" role="presentation">
-                            <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
-                                aria-selected="false">2º Passo</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-                            <p class="mb-0">
-                                @include('components.Forms.cadastro-pessoa')
-                            </p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-                            <p class="mb-0">
-                                @include('components.Forms.cadastro-pessoa-detalhado')
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    {{-- /CONTENT --}}
+    @include('components.Forms.cadastro-pessoa-detalhado')
 @endsection
 @section('scripts')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -58,7 +12,7 @@
             var meuBotao = $("#botaoProximo"); // referenciando um botão em [cadastro-pessoa.blade.php] !
 
             meuBotao.on("click", function() {
-                if ($('#rua').val() && $('#cep').val().length === 8) {
+                if ($('#rua').val() && $('#cep').val().length === 8 && $('#campo-5').val().length > 14) {
                     var elementoAlvoID = meuBotao.data("target");
                     var elementoAlvo = $(elementoAlvoID);
 
@@ -80,16 +34,23 @@
 
             function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
+                $("#cep").val("");
                 $("#rua").val("");
                 $("#bairro").val("");
                 $("#cidade").val("");
                 $("#uf").val("");
                 $("#ibge").val("");
+                $('#cep').prop("disabled", false);
+                $('#custom-loader-cep').addClass("d-none");
             }
 
             //Quando o campo cep perde o foco.
             $("#cep").on('input', function() {
+
                 if ($(this).val().length === 8) {
+
+                    $(this).prop("disabled", true);
+                    $('#custom-loader-cep').removeClass("d-none");
                     //Nova variável "cep" somente com dígitos.
                     var cep = $(this).val().replace(/\D/g, '');
 
@@ -120,6 +81,8 @@
                                     $("#cidade").val(dados.localidade);
                                     $("#uf").val(dados.uf);
                                     $("#ibge").val(dados.ibge);
+                                    $('#cep').prop("disabled", false);
+                                    $('#custom-loader-cep').addClass("d-none");
                                 } //end if.
                                 else {
                                     //CEP pesquisado não foi encontrado.
@@ -147,6 +110,7 @@
             // Selecione o botão e desabilite-o inicialmente
             var meuBotao = $("#botaoProximo");
             var botao2passo = $("#pills-2-tab");
+
             meuBotao.prop("disabled", true);
             botao2passo.prop("disabled", true);
 
@@ -172,5 +136,22 @@
             // O código acima irá desabilitar o botão até que todos os campos estejam preenchidos
             // O botão será ativado automaticamente quando todos os campos estiverem preenchidos
         });
+    </script>
+    <script>
+        function formatarTelefone(input) {
+            // Remove qualquer caractere que não seja dígito
+            var numeroTelefone = input.value.replace(/\D/g, '');
+
+            // Formate o número de telefone de acordo com o tamanho
+            if (numeroTelefone.length >= 3) {
+                numeroTelefone = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2);
+            }
+            if (numeroTelefone.length >= 11) {
+                numeroTelefone = numeroTelefone.substring(0, 10) + '-' + numeroTelefone.substring(10);
+            }
+
+            // Atualize o valor do campo de entrada
+            input.value = numeroTelefone;
+        }
     </script>
 @endsection

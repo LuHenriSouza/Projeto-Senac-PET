@@ -15,7 +15,7 @@ class Raca extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'raca';
+    protected $table = 'racas';
     protected $primaryKey = 'id_raca';
     protected $dates = [
         'created_at',

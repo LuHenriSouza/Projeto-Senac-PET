@@ -11,7 +11,7 @@ class Tamanho extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'id_tamanho';
+    protected $table = 'tamanhos';
     protected $primaryKey = 'id_tamanho';
     protected $dates = [
         'created_at',

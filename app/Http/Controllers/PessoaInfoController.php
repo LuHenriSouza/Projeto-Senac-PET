@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pessoa;
 use App\Models\PessoaInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PessoaInfoController extends Controller
 {
@@ -20,7 +22,7 @@ class PessoaInfoController extends Controller
      */
     public function create()
     {
-        //
+        return view('projeto.adotar');
     }
 
     /**
