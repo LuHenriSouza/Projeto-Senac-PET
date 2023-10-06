@@ -24,7 +24,7 @@ return new class extends Migration
         \App\Models\User::factory()->create([
             'name' => 'Luiz',
             'email' => 'luiz@gmail.com',
-            'password' => '$10$QTFwzTGfROLWoYor4uAvTO7i4Wx77YzOHeAlyByAM8bor1aioyaJy' //20032002l
+            'password' => '$2y$10$3QAjPxdKq3A2VkZXw8E9Z.z4MJlTbg3ZgWRgVEM8LbGzXNJ2h24mm' //20032002l
         ]);
 
     }

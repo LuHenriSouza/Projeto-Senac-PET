@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{PessoaController, PessoaInfoController};
+use App\Http\Controllers\{AnimaisController, EspecieController, PessoaController, PessoaInfoController, RacaController};
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +21,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/work',function () {
         return view('projeto.funcionario');
     })->name('work');
+
+    Route::get('/animais', [AnimaisController::class, 'index'])->name('animais.index');
+    route::get('/racas', [RacaController::class], 'index')->name('racas.index');
+    Route::get('/especies', [EspecieController::class, 'index'])->name('especies.index');
 });
 
 Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
