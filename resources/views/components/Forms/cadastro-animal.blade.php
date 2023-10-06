@@ -36,8 +36,8 @@
                                     style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Nascimento"
-                                    style="height: 55px;">
+                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Ano do Nascimento"
+                                    style="height: 55px;" maxlength="4" oninput="formatarData(this)">
                             </div>
                             <div class="mb-3">
 
