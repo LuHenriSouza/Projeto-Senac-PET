@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\animais;
@@ -37,7 +38,26 @@ class AnimaisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        if ($request) {
+            $animal = new Animais();
+
+            $animal->nome = $request->nome;
+            $animal->especie = $request->especie;
+            $animal->idade = $request->idade;
+            $animal->cor = $request->cor;
+            $animal->raca = $request->raca;
+            $animal->especie = $request->especie;
+
+
+
+            $animal->save();
+
+
+        }
+
+        return view('projeto.test');
+
     }
 
     /**

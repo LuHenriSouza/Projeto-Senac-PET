@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{PessoaController, PessoaInfoController};
+use App\Http\Controllers\{PessoaController, PessoaInfoController, AnimaisController};
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +28,17 @@ Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
 
-Route::get('/cadanimal', //function (){return view('projeto.test');}
+Route::get('/animal', //function (){return view('projeto.test');}
 [AnimaisController::class, 'create']
-)->name('cadanimal');
+)->name('animal');
+
+Route::get('/especies', function () {
+    return view('projeto.especie');
+})->name('especies');
+
+Route::get('/racas', function () {
+    return view('projeto.raca');
+})->name('racas');
 
 // cometario teste
 
