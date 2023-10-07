@@ -34,15 +34,15 @@ Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
 Route::get('/animal', //function (){return view('projeto.test');}
 [AnimaisController::class, 'create']
-)->name('animal');
+)->name('animal.index');
 
 Route::get('/especies', function () {
     return view('projeto.especie');
-})->name('especies');
+})->name('especies.index');
 
 Route::get('/racas', function () {
     return view('projeto.raca');
-})->name('racas');
+})->name('racas.index');
 
 // cometario teste
 
