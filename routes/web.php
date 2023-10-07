@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\{PessoaController, PessoaInfoController, AnimaisController};
-=======
 use App\Http\Controllers\{AnimaisController, EspecieController, PessoaController, PessoaInfoController, RacaController};
->>>>>>> Luiz
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
