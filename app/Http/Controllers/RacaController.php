@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Especie;
 use App\Models\Raca;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -22,7 +23,8 @@ class RacaController extends Controller
      */
     public function create()
     {
-        return view('projeto.racas.raca-create');
+        $especies = Especie::get();
+        return view('projeto.racas.raca-create')->with(compact('especies'));
     }
 
     /**
