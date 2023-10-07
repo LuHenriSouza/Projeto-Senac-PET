@@ -15,5 +15,5 @@
 }
 
 .square:hover {
-    color: #fff;
+    color: #000 !important;
 }
