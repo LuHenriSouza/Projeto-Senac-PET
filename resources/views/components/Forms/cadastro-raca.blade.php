@@ -22,7 +22,7 @@
                             style="height: 55px;" aria-label="Default select example">
                             <option value="" disabled selected>Selecione uma espécie...</option>
                             @foreach($especies as $especie)
-                                <option value="{{ $especie->id }}">{{ $especie->nome }}</option>
+                                <option value="{{ $especie->id_especie }}">{{ $especie->especie }}</option>
                             @endforeach
                         </select>
                     </div>
