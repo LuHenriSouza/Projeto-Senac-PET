@@ -31,12 +31,11 @@ Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 
 Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
-
-Route::get(
-    '/animal', //function (){return view('projeto.test');}
-    [AnimaisController::class, 'create']
-)->name('animal.index');
-
+Route::controller(AnimaisController::class)->prefix('/animais')->group(function () {
+    Route::get('/', 'index')->name('animais.index');
+    Route::get('/novo', 'create')->name('animais.create');
+    Route::post('/novo', 'store')->name('animais.store');
+});
 Route::controller(EspecieController::class)->prefix('/especies')->group(function () {
     Route::get('/', 'index')->name('especies.index');
     Route::get('/novo', 'create')->name('especies.create');
