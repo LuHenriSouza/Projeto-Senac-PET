@@ -8,16 +8,6 @@
         <form method="POST">
         <div class="container">
 
-            <div class="col-12">
-
-                <select class="form-select bg-light border-0 px-4" name="especie" id="id_especie"
-                    style="height: 55px;" aria-label="Default select example">
-                    <option value="" disabled selected>Selecione uma espécie...</option>
-                    @foreach($especies as $especie)
-                        <option value="{{ $especie->id }}">{{ $especie->nome }}</option>
-                    @endforeach
-                </select>
-            </div>
 
             <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase">Raças</h6>
@@ -25,6 +15,18 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
+
+                    <div class="col-12">
+
+                        <select class="form-select bg-light border-0 px-4" name="especie" id="id_especie"
+                            style="height: 55px;" aria-label="Default select example">
+                            <option value="" disabled selected>Selecione uma espécie...</option>
+                            @foreach($especies as $especie)
+                                <option value="{{ $especie->id }}">{{ $especie->nome }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
 
                         <div class="row g-3">
                             <div class="col-12">
