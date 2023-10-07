@@ -31,19 +31,11 @@ class Raca extends Model
     // Relacionamentos
 
     public function animais(){
-        return $this->belongsTo(
-            Animais::class,
-            'id_raca',
-            'id_raca'
-        );
+        return $this->hasMany(Animais::class, 'id_raca', 'id_raca');
     }
 
-    public function especie(){
-        return $this->belongsTo(
-            Especie::class,
-            'id_raca',
-            'id_raca'
-        );
+    public function especies(){
+        return $this->belongsTo(Especie::class, 'id_especie', 'id_especie');
     }
 
 

@@ -14,7 +14,7 @@ class RacaController extends Controller
      */
     public function index()
     {
-        $racas = Raca::paginate(10);
+        $racas = Raca::with('especies')->paginate(20);
         return view('projeto.racas.raca-index')->with(compact('racas'));
     }
 

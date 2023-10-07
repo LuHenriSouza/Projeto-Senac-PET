@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Raca;
+use App\Models\{Raca, Animais};
 
 class Especie extends Model
 {
@@ -27,10 +27,11 @@ class Especie extends Model
     // Relacionamentos
 
     public function raca(){
-        return $this->belongsTo(
-            Raca::class,
-            'id_especie',
-            'id_especie'
-        );
+        return $this->hasMany(Raca::class, 'id_especie', 'id_especie');
+    }
+
+    public function animais()
+    {
+        return $this->hasManyThrough(Animais::class, Raca::class, 'id_especie', 'id_raca', 'id_especie', 'id_raca');
     }
 }

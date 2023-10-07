@@ -21,5 +21,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Pessoa::factory(50)->create();
         \App\Models\PessoaInfo::factory(50)->create();
+
+        \App\Models\Especie::factory(20)->create();
+        \App\Models\Raca::factory(20)->create();
+
     }
 }
