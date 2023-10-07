@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id_animal');
             $table->string('nome',45);
             $table->string('cor',45);
-            $table->integer('idade');
+            $table->date('idade');
             $table->timestamps();
             $table->softDeletes();
         });
