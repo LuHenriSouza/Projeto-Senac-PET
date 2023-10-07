@@ -12,7 +12,7 @@ class EspecieController extends Controller
      */
     public function index()
     {
-        //
+        return view('projeto.especie');
     }
 
     /**
@@ -20,7 +20,7 @@ class EspecieController extends Controller
      */
     public function create()
     {
-        //
+        return view('projeto.especie');
     }
 
     /**

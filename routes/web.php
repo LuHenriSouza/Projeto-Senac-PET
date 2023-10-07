@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/work',function () {
+    Route::get('/work', function () {
         return view('projeto.funcionario');
     })->name('work');
 
@@ -32,19 +32,22 @@ Route::post('adotar', [PessoaController::class, 'store'])->name('adotar.post');
 Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
 
-Route::get('/animal', //function (){return view('projeto.test');}
-[AnimaisController::class, 'create']
+Route::get(
+    '/animal', //function (){return view('projeto.test');}
+    [AnimaisController::class, 'create']
 )->name('animal.index');
 
-Route::get('/especies', function () {
-    return view('projeto.especie');
-})->name('especies.index');
+Route::controller(EspecieController::class)->prefix('/especies')->group(function () {
+    Route::get('/', 'index')->name('especies.index');
+    Route::get('/novo', 'create')->name('especies.create');
+    Route::post('/novo', 'store')->name('especies.store');
+});
 
-Route::get('/racas', function () {
-    return view('projeto.raca');
-})->name('racas.index');
-
-// cometario teste
+Route::controller(RacaController::class)->prefix('/racas')->group(function () {
+    Route::get('/', 'index')->name('racas.index');
+    Route::get('/novo', 'create')->name('racas.create');
+    Route::post('/novo', 'store')->name('racas.store');
+});
 
 
 require __DIR__ . '/auth.php';
