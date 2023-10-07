@@ -12,7 +12,8 @@ class EspecieController extends Controller
      */
     public function index()
     {
-        return view('projeto.especie');
+        $especies = Especie::paginate(10);
+        return view('projeto.especies.especie-index')->with(compact('especies'));
     }
 
     /**
@@ -20,7 +21,7 @@ class EspecieController extends Controller
      */
     public function create()
     {
-        return view('projeto.especie');
+        return view('projeto.especies.especie-create');
     }
 
     /**

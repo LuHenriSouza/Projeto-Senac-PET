@@ -18,7 +18,7 @@ class AnimaisController extends Controller
     public function index()
     {
         $animais = animais::paginate(10);
-        return view('projeto.animal-index')->with(compact('animais'));
+        return view('projeto.animais.animal-index')->with(compact('animais'));
     }
 
     /**
@@ -31,7 +31,7 @@ class AnimaisController extends Controller
         $especies = Especie::get();
         $racas = Raca::get();
 
-        return view('projeto.test')->with(compact('sexos','tamanhos','especies','racas'));
+        return view('projeto.animais.animal-create')->with(compact('sexos','tamanhos','especies','racas'));
     }
 
     /**
