@@ -7,7 +7,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <form action="">
+                    <form method="POST">
                         <div class="row g-3">
                             <div class="col-12">
 

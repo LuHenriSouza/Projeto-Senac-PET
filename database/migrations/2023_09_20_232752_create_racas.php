@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('racas', function (Blueprint $table) {
             $table->increments('id_raca');
+            $table->unsignedInteger('id_especie');
             $table->string('raca',100);
             $table->timestamps();
             $table->softDeletes();
 
+            $table->foreign('id_especie')->references('id_especie')->on('especies');
         });
     }
 

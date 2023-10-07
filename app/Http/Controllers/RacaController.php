@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Raca;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class RacaController extends Controller
 {
@@ -20,7 +21,7 @@ class RacaController extends Controller
      */
     public function create()
     {
-        //
+        return view('projeto.raca');
     }
 
     /**
@@ -28,7 +29,16 @@ class RacaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome' => 'required|string|max:255', // Validação para o campo nome
+        ]);
+
+        Raca::create([
+            'nome' => $request->nome, // Obtém o nome da raça do formulário
+        ]);
+
+        Session::flash('success', 'Raça cadastrada com sucesso!');
+        return redirect()->route('projeto.raca');
     }
 
     /**
