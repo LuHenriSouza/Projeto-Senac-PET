@@ -17,7 +17,8 @@ class AnimaisController extends Controller
      */
     public function index()
     {
-        //
+        $animais = animais::paginate(10);
+        return view('projeto.animal-index')->with(compact('animais'));
     }
 
     /**
