@@ -1,20 +1,23 @@
-<div class="container">
-    <table class="table table-light table-hover table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Ações</th>
-                <th scope="col">Espécie</th>
-                <th scope="col">Quantidade</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($especies as $especie)
+@extends('layouts.main')
+@section('content')
+    <div class="container">
+        <table class="table table-light table-hover table-striped">
+            <thead>
                 <tr>
-                    <th scope="row"></th>
-                    <td scope="row">{{ $especie->especie }}</td>
-                    <td scope="row"> N/A </td>
+                    <th scope="col">Ações</th>
+                    <th scope="col">Espécie</th>
+                    <th scope="col">Quantidade</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach ($especies as $especie)
+                    <tr>
+                        <th scope="row"></th>
+                        <td scope="row">{{ $especie->especie }}</td>
+                        <td scope="row"> N/A </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+@endsection
