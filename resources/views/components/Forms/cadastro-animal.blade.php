@@ -7,7 +7,8 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}">
+                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}" action="{{route('animas.store')}}">
+                        @csrf
                         <div class="row g-3">
                             @if (!$especieSelecionada)
                                 <div class="col-12">
@@ -53,7 +54,7 @@
                                 </div>
                                 <div class="col-12">
                                     <input type="text" class="form-control bg-light border-0 px-4"
-                                        placeholder="Ano do Nascimento" style="height: 55px;" maxlength="4"
+                                        placeholder="Ano do Nascimento" style="height: 55px;" maxlength="10"
                                         oninput="formatarData(this)">
                                 </div>
                                 <div class="col-12">

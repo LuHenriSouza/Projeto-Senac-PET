@@ -5,7 +5,8 @@
         </div>
     @endif
     <div class="container-fluid pt-5">
-        <form method="POST">
+        <form method="POST" action="{{route('racas.store')}}">
+            @csrf
         <div class="container">
 
 

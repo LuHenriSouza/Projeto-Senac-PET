@@ -7,7 +7,8 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <form method="POST">
+                    <form method="POST" action="{{route('especies.store')}}">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12">
                                 <input type="text" class="form-control bg-light border-0 px-4" placeholder="Cadastre uma espécie"
