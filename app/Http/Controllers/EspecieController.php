@@ -12,7 +12,7 @@ class EspecieController extends Controller
      */
     public function index()
     {
-        $especies = Especie::paginate(10);
+        $especies = Especie::withCount('raca')->paginate(20);
         return view('projeto.especies.especie-index')->with(compact('especies'));
     }
 

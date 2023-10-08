@@ -5,7 +5,8 @@
         </div>
     @endif
     <div class="container-fluid pt-5">
-        <form method="POST">
+        <form method="POST" action="{{route('racas.store')}}">
+            @csrf
         <div class="container">
 
 
@@ -16,7 +17,7 @@
             <div class="row g-5">
                 <div class="col-lg-7">
 
-                    <div class="col-12">
+                    <div class="col-12 mb-3">
 
                         <select class="form-select bg-light border-0 px-4" name="especie" id="id_especie"
                             style="height: 55px;" aria-label="Default select example">
@@ -31,7 +32,7 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <input type="text" class="form-control bg-light border-0 px-4"
-                                    placeholder="Cadastre uma Raça" style="height: 55px;">
+                                    placeholder="Raça" style="height: 55px;">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" style="max-width: 200px;"

@@ -24,14 +24,17 @@ class AnimaisController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         $sexos = Sexo::get();
         $tamanhos = Tamanho::get();
         $especies = Especie::get();
         $racas = Raca::get();
+        $especieSelecionada = $request->input('especie');
 
-        return view('projeto.animais.animal-create')->with(compact('sexos','tamanhos','especies','racas'));
+        $nomeEspecieSelecionada = $especieSelecionada ? Especie::find($especieSelecionada)->especie : null;
+
+        return view('projeto.animais.animal-create')->with(compact('sexos','tamanhos','especies','racas', 'especieSelecionada', 'nomeEspecieSelecionada'));
     }
 
     /**
