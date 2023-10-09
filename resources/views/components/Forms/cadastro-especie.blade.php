@@ -13,6 +13,11 @@
                                 <input type="text" class="form-control bg-light border-0 px-4" placeholder="Cadastre uma espécie"
                                     style="height: 55px;">
                             </div>
+
+                            <div class="col-12">
+                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Nome"
+                                    style="height: 55px;">
+                            </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" style="max-width: 200px;" type="submit">Próximo</button>
                             </div>
