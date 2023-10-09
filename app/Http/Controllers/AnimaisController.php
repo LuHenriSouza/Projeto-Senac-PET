@@ -18,20 +18,23 @@ class AnimaisController extends Controller
     public function index()
     {
         $animais = animais::paginate(10);
-        return view('projeto.animal-index')->with(compact('animais'));
+        return view('projeto.animais.animal-index')->with(compact('animais'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         $sexos = Sexo::get();
         $tamanhos = Tamanho::get();
         $especies = Especie::get();
         $racas = Raca::get();
+        $especieSelecionada = $request->input('especie');
 
-        return view('projeto.test')->with(compact('sexos','tamanhos','especies','racas'));
+        $nomeEspecieSelecionada = $especieSelecionada ? Especie::find($especieSelecionada)->especie : null;
+
+        return view('projeto.animais.animal-create')->with(compact('sexos','tamanhos','especies','racas', 'especieSelecionada', 'nomeEspecieSelecionada'));
     }
 
     /**

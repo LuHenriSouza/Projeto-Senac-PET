@@ -16,10 +16,15 @@ class EspecieController extends Controller
     public function index()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $especies = Especie::all();
         return view('especies.index', compact('especies'));
 =======
         return view('projeto.especie');
+>>>>>>> main
+=======
+        $especies = Especie::withCount('raca')->paginate(20);
+        return view('projeto.especies.especie-index')->with(compact('especies'));
 >>>>>>> main
     }
 
@@ -31,9 +36,13 @@ class EspecieController extends Controller
     public function create()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view('especies.create');
 =======
         return view('projeto.especie');
+>>>>>>> main
+=======
+        return view('projeto.especies.especie-create');
 >>>>>>> main
     }
 
