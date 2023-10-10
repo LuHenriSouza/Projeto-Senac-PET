@@ -30,7 +30,7 @@ class AnimaisController extends Controller
         $tamanhos = Tamanho::get();
         $especies = Especie::get();
         $racas = Raca::get();
-        $especieSelecionada = $request->input('especie');
+        $especieSelecionada = $request->input('id_especie');
 
         $nomeEspecieSelecionada = $especieSelecionada ? Especie::find($especieSelecionada)->especie : null;
 
