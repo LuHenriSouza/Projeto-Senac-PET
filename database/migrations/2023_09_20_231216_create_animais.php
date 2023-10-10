@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('id_tamanho');
             $table->unsignedInteger('id_raca');
             $table->text('observacoes');
+            $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

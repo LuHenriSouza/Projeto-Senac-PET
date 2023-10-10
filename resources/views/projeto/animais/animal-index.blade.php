@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th scope="col">Ações</th>
-                    <th scope="col">Animal</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Raça</th>
                     <th scope="col">Espécie</th>
                     <th scope="col">cor</th>
@@ -26,9 +26,10 @@
                         <th scope="row"></th>
                         <td scope="row">{{ $animal->nome }}</td>
                         <td scope="row">{{ $animal->raca->raca }}</td>
-                        <td scope="row">{{ $animal->raca->especies }}</td>
+                        <td scope="row">{{ $animal->raca->especies->especie }}</td>
                         <td scope="row">{{ $animal->cor }}</td>
                         <td scope="row">{{ $animal->idade->diffInYears(\Carbon\Carbon::now()) }}</td>
+                        <td scope="row">{{ $animal->status ? 'Adotado' : 'Para Adotar'}}</td>
                     </tr>
                 @endforeach
             </tbody>
