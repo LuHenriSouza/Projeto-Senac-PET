@@ -81,11 +81,11 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0 px-4" placeholder="Cor"
+                                    <input type="text" class="form-control bg-light border-0 px-4" placeholder="Cor"
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0 px-4"
+                                    <input type="text" class="form-control bg-light border-0 px-4"
                                         placeholder="Observações: (doenças, vacinas, deficiências...)"
                                         style="height: 55px;">
                                 </div>
