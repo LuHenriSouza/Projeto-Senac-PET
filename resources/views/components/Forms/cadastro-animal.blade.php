@@ -20,7 +20,7 @@
                         <div class="row g-3">
                             @if (!$especieSelecionada)
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0 px-4" name="especie" id="id_especie"
+                                    <select class="form-select bg-light border-0 px-4" name="id_especie" id="id_especie"
                                         style="height: 55px;" aria-label="Default select example">
                                         <option value="" disabled selected>Selecione uma espécie...</option>
                                         @foreach ($especies as $especie)

@@ -25,7 +25,7 @@ class Raca extends Model
 
     protected $fillable = [
         'raca',
-        'id_especies'
+        'id_especie'
     ];
 
     // Relacionamentos

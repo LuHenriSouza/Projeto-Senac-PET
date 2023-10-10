@@ -14,7 +14,7 @@ class RacaController extends Controller
      */
     public function index()
     {
-        $racas = Raca::with('especies')->paginate(20);
+        $racas = Raca::with('especies')->orderBy('updated_at', 'desc')->paginate(20);
         return view('projeto.racas.raca-index')->with(compact('racas'));
     }
 
@@ -32,9 +32,7 @@ class RacaController extends Controller
      */
     public function store(Request $request)
     {
-        Raca::create([
-            'raca' => $request->raca
-        ]);
+        Raca::create($request->all());
 
         return redirect()->back()->with('success', 'Cadastrado com Sucesso');
 
