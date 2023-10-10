@@ -1,13 +1,16 @@
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
         <div class="container">
+            <a href="{{ route('animais.index') }}">
+                <i class="fa-solid fa-circle-arrow-left fa-2x m-2 mb-4"></i>
+            </a>
             <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase">Animal</h6>
                 <h1 class="display-5 text-uppercase mb-0">Cadastro do Animal</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}" action="{{route('animas.store')}}">
+                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}" action="{{route('animais.store')}}">
                         @csrf
                         <div class="row g-3">
                             @if (!$especieSelecionada)
