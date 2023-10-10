@@ -34,6 +34,8 @@ Route::get('/adotar', [PessoaInfoController::class, 'create'])->name('adotar');
 
 Route::controller(AnimaisController::class)->prefix('/animais')->group(function () {
     Route::get('/', 'index')->name('animais.index');
+    Route::get('/show/{id}', 'show')->name('animais.show');
+    Route::get('/delete/{id}', 'destroy')->name('animais.destroy');
     Route::get('/novo', 'create')->name('animais.create');
     Route::post('/novo', 'store')->name('animais.store');
 });

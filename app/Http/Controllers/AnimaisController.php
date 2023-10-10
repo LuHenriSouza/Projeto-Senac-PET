@@ -54,9 +54,11 @@ class AnimaisController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(animais $animais)
+    public function show(int $id)
     {
-        //
+        $animal = Animais::find($id);
+
+        return view('projeto.animais.animal-show')->with(compact('animal'));
     }
 
     /**
@@ -78,8 +80,11 @@ class AnimaisController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(animais $animais)
+    public function destroy(int $id)
     {
-        //
+        $animal = Animais::find($id);
+        $animal->delete();
+
+        return redirect()->back()->with('deleted', 'Animal deletado!');
     }
 }
