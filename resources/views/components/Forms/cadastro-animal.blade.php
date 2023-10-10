@@ -7,7 +7,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-7">
-                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}" action="{{route('animas.store')}}">
+                    <form method="{{ $especieSelecionada ? 'POST' : 'GET' }}" action="{{route('animais.store')}}">
                         @csrf
                         <div class="row g-3">
                             @if (!$especieSelecionada)
