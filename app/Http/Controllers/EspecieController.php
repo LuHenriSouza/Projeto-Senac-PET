@@ -10,9 +10,17 @@ class EspecieController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $especies = Especie::paginate(10);
+        $search = $request->get('search');
+
+        $especies = Especie::withCount('raca')
+        ->where(function ($query) use ($search) {
+            if ($search) {
+                $query->where('especie', 'like', "%$search%");
+            }
+        })->orderBy('updated_at', 'desc')->paginate(20);
+
         return view('projeto.especies.especie-index')->with(compact('especies'));
     }
 
@@ -29,7 +37,11 @@ class EspecieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Especie::create([
+            'especie' => $request->especie
+        ]);
+
+        return redirect()->back()->with('success', 'Cadastrado com Sucesso');
     }
 
     /**

@@ -51,24 +51,25 @@ class Animais extends Model
     public function raca(){
         return $this->belongsTo(
             Raca::class,
-            'id_animal',
-            'id_animal'
+            'id_raca',
+            'id_raca'
         );
+
     }
 
     public function statusAdocao(){
         return $this->belongsTo(
             statusAdocao::class,
-            'id_animal',
-            'id_animal'
+            'id_status_adocao',
+            'id_status_adocao'
         );
     }
 
     public function sexo(){
         return $this->belongsTo(
             Sexo::class,
-            'id_animal',
-            'id_animal'
+            'id_sexo',
+            'id_sexo'
         );
     }
 
@@ -83,8 +84,8 @@ class Animais extends Model
     public function tamanho(){
         return $this->belongsTo(
             Tamanho::class,
-            'id_animal',
-            'id_animal'
+            'id_tamanho',
+            'id_tamanho'
         );
     }
 

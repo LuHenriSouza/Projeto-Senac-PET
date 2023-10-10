@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('nome',45);
             $table->string('cor',45);
             $table->date('idade');
+            $table->unsignedInteger('id_sexo');
+            $table->unsignedInteger('id_tamanho');
+            $table->unsignedInteger('id_raca');
+            $table->text('observacoes');
             $table->timestamps();
             $table->softDeletes();
         });

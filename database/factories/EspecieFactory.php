@@ -17,7 +17,7 @@ class EspecieFactory extends Factory
     public function definition(): array
     {
         return [
-            'especies' => fake()->paragraph(1)
+            'especie' => fake()->sentence(1)
         ];
     }
 }
