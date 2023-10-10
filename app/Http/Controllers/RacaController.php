@@ -32,16 +32,13 @@ class RacaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|string|max:255', // Validação para o campo nome
-        ]);
-
         Raca::create([
-            'nome' => $request->nome, // Obtém o nome da raça do formulário
+            'raca' => $request->raca
         ]);
 
-        Session::flash('success', 'Raça cadastrada com sucesso!');
-        return redirect()->route('projeto.racas.raca-create');
+        return redirect()->back()->with('success', 'Cadastrado com Sucesso');
+
+
     }
 
     /**
