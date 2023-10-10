@@ -44,23 +44,10 @@ class AnimaisController extends Controller
     {
 
         if ($request) {
-            $animal = new Animais();
-
-            $animal->nome = $request->nome;
-            $animal->especie = $request->especie;
-            $animal->idade = $request->idade;
-            $animal->cor = $request->cor;
-            $animal->raca = $request->raca;
-            $animal->especie = $request->especie;
-
-
-
-            $animal->save();
-
-
+            Animais::create($request->all());
         }
 
-        return view('projeto.test');
+        return redirect()->back()->with('success', 'Cadastrado com Sucesso');
 
     }
 

@@ -34,8 +34,13 @@ class Animais extends Model
         'id_status_adocao',
         'id_raca',
         'id_tamanho',
+        'observacoes',
         'id_historicoAnimal',
         'id_sexo'
+    ];
+
+    protected $casts = [
+        'idade' => 'date',
     ];
 
     // Relacionamentos

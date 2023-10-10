@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Tamanho;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,10 @@ return new class extends Migration
             $table->softDeletes();
 
         });
+
+        Tamanho::create(['tamanho' => 'P']);
+        Tamanho::create(['tamanho' => 'M']);
+        Tamanho::create(['tamanho' => 'G']);
     }
 
     /**

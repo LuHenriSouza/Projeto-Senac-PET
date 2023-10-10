@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Sexo;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,11 +14,14 @@ return new class extends Migration
     {
         Schema::create('sexos', function (Blueprint $table) {
             $table->increments('id_sexo');
-            $table->char('sexo',1);
+            $table->string('sexo',20);
             $table->timestamps();
             $table->softDeletes();
 
         });
+
+        Sexo::create(['sexo' => 'Masculino']);
+        Sexo::create(['sexo' => 'Feminino']);
     }
 
     /**
