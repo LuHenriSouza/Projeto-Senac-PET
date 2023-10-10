@@ -1,6 +1,9 @@
 @extends('layouts.main')
 @section('content')
     <div class="container">
+        <a href="{{ route('work') }}">
+            <i class="fa-solid fa-circle-arrow-left fa-2x m-2 mb-4"></i>
+        </a>
         <h1>Raças</h1>
         <a href="{{ route('racas.create') }}" class="mb-3 btn btn-primary">Cadastrar Raça</a>
 
