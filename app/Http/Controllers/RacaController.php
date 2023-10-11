@@ -42,9 +42,11 @@ class RacaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Raca $raca)
+    public function show(int $id)
     {
-        //
+        $raca = Raca::find($id);
+
+        return view('projeto.racas.raca-show')->with(compact('raca'));
     }
 
     /**
@@ -66,8 +68,11 @@ class RacaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Raca $raca)
+    public function destroy(int $id)
     {
-        //
+        $raca = Raca::find($id);
+        $raca->delete();
+
+        return redirect()->back()->with('deleted', 'Raça deletado!');
     }
 }
