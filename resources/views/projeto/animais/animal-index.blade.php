@@ -11,7 +11,7 @@
         @endif
         <h1>Animais</h1>
         <a href="{{ route('animais.create') }}" class="mb-3 btn btn-primary">Cadastrar Animal</a>
-
+        {{ $animais->links() }}
         <table class="table table-light table-hover table-striped">
             <thead>
                 <tr>
