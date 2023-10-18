@@ -47,9 +47,10 @@ class EspecieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Especie $especie)
+    public function show(int $id)
     {
-        //
+        $especie = Especie::find($id);
+        return view('projeto.especies.especie-show')->with(compact('especie'));
     }
 
     /**
@@ -71,8 +72,11 @@ class EspecieController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Especie $especie)
+    public function destroy(int $id)
     {
-        //
+        $especie = Especie::find($id);
+        $especie->delete();
+
+        return redirect()->back()->with('deleted', 'Animal deletado!');
     }
 }

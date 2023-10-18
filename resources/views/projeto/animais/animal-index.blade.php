@@ -11,6 +11,16 @@
         @endif
         <h1>Animais</h1>
         <a href="{{ route('animais.create') }}" class="mb-3 btn btn-primary">Cadastrar Animal</a>
+        <form action="" method="GET">
+            <input type="text" class="form-control bg-light border-0 px-4" placeholder="Pesquisa" style="height: 55px;"
+                name="search" id="search" value="{{ old('search', request()->get('search')) }}">
+            <button type="submit" href="%" class="btn btn-primary my-2 float-end">Pesquisar</button>
+            @if (request()->get('search') != '')
+                <a class="btn btn-primary col-md-1 my-2 float-end mx-2" href="{{ route('animais.index') }}">
+                    Limpar
+                </a>
+            @endif
+        </form>
         {{ $animais->links() }}
         <table class="table table-light table-hover table-striped">
             <thead>

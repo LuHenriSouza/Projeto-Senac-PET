@@ -12,9 +12,16 @@ class RacaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $racas = Raca::with('especies')->orderBy('updated_at', 'desc')->paginate(20);
+        $search = $request->get('search');
+
+        $racas = Raca::with('especies')
+        ->where(function ($query) use ($search) {
+            if ($search) {
+                $query->where('raca', 'like', "%$search");
+            }
+        }) ->orderBy('updated_at', 'desc')->paginate(20);
         return view('projeto.racas.raca-index')->with(compact('racas'));
     }
 
