@@ -80,6 +80,6 @@ class RacaController extends Controller
         $raca = Raca::find($id);
         $raca->delete();
 
-        return redirect()->back()->with('deleted', 'Raça deletado!');
+        return redirect()->back()->with('deleted', 'Raça deletada!');
     }
 }

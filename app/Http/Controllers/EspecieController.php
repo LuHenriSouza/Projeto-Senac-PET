@@ -77,6 +77,6 @@ class EspecieController extends Controller
         $especie = Especie::find($id);
         $especie->delete();
 
-        return redirect()->back()->with('deleted', 'Animal deletado!');
+        return redirect()->back()->with('deleted', 'Espécie deletada!');
     }
 }

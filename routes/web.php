@@ -41,12 +41,16 @@ Route::controller(AnimaisController::class)->prefix('/animais')->group(function 
 });
 Route::controller(EspecieController::class)->prefix('/especies')->group(function () {
     Route::get('/', 'index')->name('especies.index');
+    Route::get('/show/{id}', 'show')->name('especies.show');
+    Route::get('/delete/{id}', 'destroy')->name('especies.destroy');
     Route::get('/novo', 'create')->name('especies.create');
     Route::post('/novo', 'store')->name('especies.store');
 });
 
 Route::controller(RacaController::class)->prefix('/racas')->group(function () {
     Route::get('/', 'index')->name('racas.index');
+    Route::get('/show/{id}', 'show')->name('racas.show');
+    Route::get('/delete/{id}', 'destroy')->name('racas.destroy');
     Route::get('/novo', 'create')->name('racas.create');
     Route::post('/novo', 'store')->name('racas.store');
 });

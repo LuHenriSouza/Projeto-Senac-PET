@@ -30,18 +30,18 @@
                 @foreach ($racas as $raca)
                     <tr>
                         <th scope="row" style="max-width: 4em;">
-                            <a href="{{ route('animais.show', $raca->id_raca) }}" class="btn btn-info m-1"
+                            <a href="{{ route('racas.show', $raca->id_raca) }}" class="btn btn-info m-1"
                                 style="border-radius: 10%;">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
-                            <a href="{{ route('animais.destroy', $raca->id_raca) }}" class="btn btn-danger m-1"
+                            <a href="{{ route('racas.destroy', $raca->id_raca) }}" class="btn btn-danger m-1"
                                 style="border-radius: 10%;">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </th>
                         <th scope="row"></th>
                         <td scope="row">{{ $raca->raca }}</td>
-                        <td scope="row">{{ $raca->especies->especie }}</td>
+                        <td scope="row">{{ $raca->especie }}</td>
                         <td scope="row">{{ $raca->animais->count() }}</td>
                     </tr>
                 @endforeach

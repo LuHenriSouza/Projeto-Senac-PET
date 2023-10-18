@@ -32,16 +32,16 @@
                 @foreach ($especies as $especie)
                     <tr>
                         <th scope="row" style="max-width: 4em;">
-                            <a href="{{ route('animais.show', $especie->id_especie) }}" class="btn btn-info m-1"
+                            <a href="{{ route('especies.show', $especie->id_especie) }}" class="btn btn-info m-1"
                                 style="border-radius: 10%;">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
-                            <a href="{{ route('animais.destroy', $especie->id_especie) }}" class="btn btn-danger m-1"
+                            <a href="{{ route('especies.destroy', $especie->id_especie) }}" class="btn btn-danger m-1"
                                 style="border-radius: 10%;">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </th>
-                        <td scope="row">{{ $especie->especie }}</td>
+                        <td scope="row"> {{ $especie->especie }}</td>
                         <td scope="row"> {{ $especie->raca->count() }} </td>
                         <td scope="row"> {{ $especie->animais->count() }} </td>
                     </tr>
